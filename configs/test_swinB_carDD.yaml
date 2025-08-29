@@ -1,0 +1,60 @@
+# This tells the script to load all the defaults from your base config.
+_BASE_: "Base-DiffusionDet.yaml"
+
+MODEL:
+  # --- CRITICAL CHANGE FOR TESTING ---
+  # This now points to your FINAL model from the last training run.
+  # Make sure this path is correct.
+  WEIGHTS: "./output_carDD_swinB_loss_caf_resEncoder/model_0017999.pth"
+  
+  # --- Swin Transformer Backbone Configuration (must match the trained model) ---
+  BACKBONE:
+    NAME: build_swintransformer_fpn_backbone
+  SWIN:
+    SIZE: B-22k
+  FPN:
+    IN_FEATURES: ["swin0", "swin1", "swin2", "swin3" ]
+  
+  DiffusionDet:
+    NUM_PROPOSALS: 500
+    NUM_CLASSES: 6 # Must be 6 to match your trained model
+  
+  ROI_HEADS:
+    NUM_CLASSES: 6 # Must be 6 to match your trained model
+
+DATASETS:
+  # The TRAIN dataset isn't used in --eval-only mode, but we leave it for consistency.
+  TRAIN: ("carDD_train",)
+  
+  # --- CRITICAL CHANGE FOR TESTING ---
+  # This now points to your registered "carDD_test" dataset.
+  TEST:  ("carDD_test",)
+
+# The SOLVER, INPUT, etc. sections below are not used during evaluation,
+# but we keep them so the file is a complete and valid configuration.
+SOLVER:
+  IMS_PER_BATCH: 2
+  BASE_LR: 0.000025
+  STEPS: (15000, 18000)
+  MAX_ITER: 20000
+  CHECKPOINT_PERIOD: 2000
+  WARMUP_FACTOR: 0.01
+  WARMUP_ITERS: 1000
+  WEIGHT_DECAY: 0.0001
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 1.0
+  CLIP_GRADIENTS:
+      ENABLED: True
+      CLIP_TYPE: "full_model"
+      CLIP_VALUE: 1.0     # <-- This is the correct key
+      NORM_TYPE: 2.0
+
+INPUT:
+  CROP:
+    ENABLED: True
+  FORMAT: "RGB"
+
+TEST:
+  EVAL_PERIOD: 1000
+
+OUTPUT_DIR: ./output_carDD_swinB

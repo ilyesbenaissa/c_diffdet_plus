@@ -1,0 +1,15 @@
+_BASE_: "./diffdet.carDD.res101.yaml"
+MODEL:
+  WEIGHTS: "output_carDD_res101/torchvision-R-101.pkl"
+  RESNETS:
+    DEFORM_ON_PER_STAGE: [True, True, True, True]
+    DEFORM_MODULATED: True
+    DEFORM_NUM_GROUPS: 1
+  ROI_HEADS:
+    NUM_CLASSES: 6
+
+SOLVER:
+  MAX_ITER: 50000
+  STEPS: (22500, 27000)
+
+OUTPUT_DIR: ./output_carDD_res101_dcnplus

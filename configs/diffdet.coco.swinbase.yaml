@@ -1,0 +1,65 @@
+# This tells the script to load all the defaults from your base config.
+_BASE_: "Base-DiffusionDet.yaml"
+
+MODEL:
+  # --- This now points to the local Swin Transformer weights ---
+  # IMPORTANT: You must download this file first (see notes below).
+  WEIGHTS: "./output_carDD_swinB_loss_caf_resEncoder/model_0017999.pth"
+  # --- Swin Transformer Backbone Configuration ---
+  BACKBONE:
+    NAME: build_swintransformer_fpn_backbone
+  SWIN:
+    SIZE: B-22k
+  FPN:
+    IN_FEATURES: ["swin0", "swin1", "swin2", "swin3" ]
+  
+  DiffusionDet:
+    NUM_PROPOSALS: 500
+    # --- MODIFIED for CarDD ---
+    NUM_CLASSES: 6 # Changed from 80 (COCO) to 6 (CarDD)
+  
+  # --- ADDED for safety ---
+  # It's good practice to also set NUM_CLASSES here, as in our previous config.
+  ROI_HEADS:
+    NUM_CLASSES: 6
+
+DATASETS:
+  # --- MODIFIED for CarDD ---
+  # Pointing to your registered CarDD datasets.
+  TRAIN: ("carDD_train",)
+  TEST:  ("carDD_val",)
+
+SOLVER:
+  # --- MODIFIED for CarDD (Recommended) ---
+  IMS_PER_BATCH: 2 # Lowered batch size in case of memory issues.
+  BASE_LR: 0.000025
+  LR_SCHEDULER_NAME: "WarmupCosineLR"
+  MAX_ITER: 20000
+  CHECKPOINT_PERIOD: 1000 # Save checkpoints more often on a shorter run
+  # ------------------------------------
+  WARMUP_FACTOR: 0.01
+  WARMUP_ITERS: 0
+  WEIGHT_DECAY: 0.0001
+  OPTIMIZER: "ADAMW"
+  BACKBONE_MULTIPLIER: 1.0  # keep same with BASE_LR.
+  CLIP_GRADIENTS:
+    ENABLED: True
+    CLIP_TYPE: "full_model"
+    CLIP_VALUE: 1.0
+    NORM_TYPE: 2.0
+  # --- MODIFIED for CarDD ---
+  # Adjusted to the shorter training schedule for your smaller dataset.
+
+INPUT:
+  # --- KEPT your setting ---
+  # Using cropping as you specified.
+  CROP:
+    ENABLED: True
+  FORMAT: "RGB"
+
+TEST:
+  EVAL_PERIOD: 1000 # MODIFIED to evaluate more frequently on a shorter run
+
+# --- ADDED for CarDD ---
+# Using a new output directory for this Swin Transformer experiment.
+OUTPUT_DIR: ./output_carDD_swinB
