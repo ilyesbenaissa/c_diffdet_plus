@@ -68,7 +68,7 @@ python demo.py --input path/to/image.jpg
 The script will output detected objects with bounding boxes and confidence scores.
 
 
-### 6. Run inference
+### 6. Evaluate/Test
 Run evaluation using:
 ```bash
 python train_net.py --eval-only --config configs/test_swinB_carDD.yaml
