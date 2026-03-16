@@ -4,7 +4,7 @@ This repository provides the PyTorch implementation of **C-DiffDet+**, a diffusi
 
 ---
 
-# 📂 Repository Structure
+## 📂 Repository Structure
 
 ```bash
 c_diffdet_plus
@@ -19,26 +19,26 @@ c_diffdet_plus
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
-## 1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/ilyesbenaissa/c_diffdet_plus.git
 cd c_diffdet_plus
 ```
-2. Create a virtual environment
+### 2. Create a virtual environment
 Using conda:
 ```bash
 conda create -n cdiffdet python=3.9
 conda activate cdiffdet
 ```
-## 2. Prepare dataset
+### 2. Prepare dataset
 
 The framework supports training on datasets in COCO format. Prepare your dataset and update paths inside the configuration files.
 Download [CarDD Dataset](https://cardd-ustc.github.io/)
 
-## 3. Install dependencies
+### 3. Install dependencies
    
 ```bash
 pip install torch torchvision
