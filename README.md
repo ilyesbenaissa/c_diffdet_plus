@@ -93,12 +93,12 @@ If you use this code in your research, please cite:
 ```
 ---
 👨‍💻 Contact:
-
 For any questions related to this project, feel free to open issue, or contact: ilyesbenaissa7429@gmail.com , abdellahzakaria.sellam@unisalento.it
+
 ---
 📜 License
-
 This project is licensed under the MIT License.
+
 ---
 ⭐ Support
 If you find this repository useful, please consider giving it a star ⭐.
