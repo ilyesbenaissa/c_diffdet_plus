@@ -33,12 +33,12 @@ Using conda:
 conda create -n cdiffdet python=3.9
 conda activate cdiffdet
 ```
-## 1. Prepare dataset
+## 2. Prepare dataset
 
 The framework supports training on datasets in COCO format. Prepare your dataset and update paths inside the configuration files.
 Download [CarDD Dataset](https://cardd-ustc.github.io/)
 
-3. Install dependencies
+## 3. Install dependencies
    
 ```bash
 pip install torch torchvision
