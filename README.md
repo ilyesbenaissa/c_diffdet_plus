@@ -52,14 +52,14 @@ pip install --no-build-isolation 'git+https://github.com/facebookresearch/detect
 Download pretrained model:
 [swin_base_patch4_window7_224_22k](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/swin_base_patch4_window7_224_22k.pkl)
 
-🧠 Training
+### Training
 To train the model:
 
 ```bash
 python train_net.py --config configs/diffdet.coco.swinbase.yaml
 ```
 
-🔍 Inference
+### Inference
 Run inference on an image:
 
 ```bash
@@ -68,17 +68,17 @@ python demo.py --input path/to/image.jpg
 The script will output detected objects with bounding boxes and confidence scores.
 
 
-🧪 Test/Evaluation
+### Test/Evaluation
 Run evaluation using:
 ```bash
 python train_net.py --eval-only --config configs/test_swinB_carDD.yaml.yaml
 ```
 
-📈 Results
+### Results
 ![Detection Results](results.png)
 
 ---
-📝 Citation
+##📝 Citation
 If you use this code in your research, please cite:
 ```bash
 @misc{sellam2025cdiffdetfusingglobalscene,
@@ -92,22 +92,22 @@ If you use this code in your research, please cite:
 }
 ```
 ---
-👨‍💻 Contact:
+##👨‍💻 Contact:
 
 For any questions related to this project, feel free to open issue, or contact: ilyesbenaissa7429@gmail.com , abdellahzakaria.sellam@unisalento.it
 
 ---
-📜 License:
+##📜 License:
 
 This project is licensed under the MIT License.
 
 ---
-⭐ Support
+## ⭐ Support
 If you find this repository useful, please consider giving it a star ⭐.
 
 
 ---
-# 🙏 Acknowledgments
+## 🙏 Acknowledgments
 
 This project builds upon several outstanding open-source projects. We sincerely thank the authors and contributors of the following repositories:
 
