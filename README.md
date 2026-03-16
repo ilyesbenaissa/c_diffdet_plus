@@ -52,14 +52,14 @@ pip install --no-build-isolation 'git+https://github.com/facebookresearch/detect
 Download pretrained model:
 [swin_base_patch4_window7_224_22k](https://github.com/ShoufaChen/DiffusionDet/releases/download/v0.1/swin_base_patch4_window7_224_22k.pkl)
 
-### Training
+### 4. Train
 To train the model:
 
 ```bash
 python train_net.py --config configs/diffdet.coco.swinbase.yaml
 ```
 
-### Inference
+### 5. Run inference
 Run inference on an image:
 
 ```bash
@@ -68,13 +68,13 @@ python demo.py --input path/to/image.jpg
 The script will output detected objects with bounding boxes and confidence scores.
 
 
-### Test/Evaluation
+### 6. Run inference
 Run evaluation using:
 ```bash
 python train_net.py --eval-only --config configs/test_swinB_carDD.yaml
 ```
 
-### Results
+### C-DiffDet+ Results on CarDD dataset
 ![Detection Results](results.png)
 
 ---
