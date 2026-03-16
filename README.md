@@ -1,11 +1,12 @@
-# C-DiffDet+
-Official Implementation of **C-DiffDet+: Fusing Global Scene Context with Generative Denoising for High-Fidelity Car Damage Detection**
+# Official Implementation of **C-DiffDet+: Fusing Global Scene Context with Generative Denoising for High-Fidelity Car Damage Detection**
 
 This repository provides the PyTorch implementation of **C-DiffDet+**, a diffusion-based object detection framework that integrates **global scene context** with **generative denoising**. The project includes scripts for **training, evaluation, visualization, and inference**, and is designed for easy experimentation and reproducibility.
 
 ---
 
 # 📂 Repository Structure
+
+```bash
 c_diffdet_plus
 │
 ├── configs/ # Configuration files
@@ -14,7 +15,7 @@ c_diffdet_plus
 ├── train_net.py # Training script
 ├── LICENSE # MIT License
 └── README.md
-
+```
 
 ---
 
