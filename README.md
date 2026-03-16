@@ -71,7 +71,7 @@ The script will output detected objects with bounding boxes and confidence score
 ### Test/Evaluation
 Run evaluation using:
 ```bash
-python train_net.py --eval-only --config configs/test_swinB_carDD.yaml.yaml
+python train_net.py --eval-only --config configs/test_swinB_carDD.yaml
 ```
 
 ### Results
