@@ -78,26 +78,28 @@ python train_net.py --eval-only --config configs/test_swinB_carDD.yaml.yaml
 ![Detection Results](results.png)
 
 ---
-##📝 Citation
+## 📝 Citation
 If you use this code in your research, please cite:
-```bash
-@misc{sellam2025cdiffdetfusingglobalscene,
-      title={C-DiffDet+: Fusing Global Scene Context with Generative Denoising for High-Fidelity Car Damage Detection}, 
-      author={Abdellah Zakaria Sellam and Ilyes Benaissa and Salah Eddine Bekhouche and Abdenour Hadid and Vito Renó and Cosimo Distante},
-      year={2025},
-      eprint={2509.00578},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2509.00578}, 
+
+```bibtex
+@misc{sellam2025cdiffdetplus,
+  title={C-DiffDet+: Fusing Global Scene Context with Generative Denoising for High-Fidelity Car Damage Detection},
+  author={Sellam, Abdellah Zakaria and Benaissa, Ilyes and Bekhouche, Salah Eddine and Hadid, Abdenour and Renó, Vito and Distante, Cosimo},
+  year={2025},
+  eprint={2509.00578},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2509.00578}
 }
 ```
+
 ---
-##👨‍💻 Contact:
+## 👨‍💻 Contact:
 
 For any questions related to this project, feel free to open issue, or contact: ilyesbenaissa7429@gmail.com , abdellahzakaria.sellam@unisalento.it
 
 ---
-##📜 License:
+## 📜 License:
 
 This project is licensed under the MIT License.
 
