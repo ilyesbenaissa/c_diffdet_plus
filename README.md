@@ -77,7 +77,7 @@ python train_net.py --eval-only --config configs/test_swinB_carDD.yaml.yaml
 📈 Results
 ![Detection Results](results.png)
 
-
+---
 📝 Citation
 If you use this code in your research, please cite:
 
@@ -90,26 +90,18 @@ If you use this code in your research, please cite:
       primaryClass={cs.CV},
       url={https://arxiv.org/abs/2509.00578}, 
 }
-
+---
 👨‍💻 Contact
-For any questions related to this project, feel free to open issue, or contact:
-
-
-📧 Email: ilyesbenaissa7429@gmail.com
-
-
-📧 Email: abdellahzakaria.sellam@unisalento.it
-
-
-
+For any questions related to this project, feel free to open issue, or contact: ilyesbenaissa7429@gmail.com , abdellahzakaria.sellam@unisalento.it
+---
 📜 License
 This project is licensed under the MIT License.
-
+---
 ⭐ Support
 If you find this repository useful, please consider giving it a star ⭐.
 
 
-
+---
 # 🙏 Acknowledgments
 
 This project builds upon several outstanding open-source projects. We sincerely thank the authors and contributors of the following repositories:
